@@ -1,0 +1,13 @@
+**/cst8359.txt
+**/bin
+**/obj
+**/.vs
+**/.idea
+**/.DS_Store
+~$Lab 5.docx
+Lab5/appsettings.json
+Lab5/appsettings.Development.json
+Lab6/appsettings.Development.json
+Lab6/appsettings.json
+Lab7/appsettings.json
+Lab7/appsettings.Development.json
