@@ -24,7 +24,7 @@ namespace Lab5.Controllers
         public async Task<IActionResult> Index(string? Id)
         {
             //return View(await _context.SportClubs.ToListAsync());
-            var viewModel = new NewsViewModel
+            var viewModel = new SportClubViewModel
             {
                 SportClubs = await _context.SportClubs
                   .Include(i => i.Subscriptions)
