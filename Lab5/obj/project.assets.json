@@ -8160,11 +8160,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\chengkuan\\source\\cst8359\\Lab5\\Lab5.csproj",
+      "projectUniqueName": "C:\\Users\\chengkuan\\source\\cst8359-Assignment2\\Lab5\\Lab5.csproj",
       "projectName": "Lab5",
-      "projectPath": "C:\\Users\\chengkuan\\source\\cst8359\\Lab5\\Lab5.csproj",
+      "projectPath": "C:\\Users\\chengkuan\\source\\cst8359-Assignment2\\Lab5\\Lab5.csproj",
       "packagesPath": "C:\\Users\\chengkuan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\chengkuan\\source\\cst8359\\Lab5\\obj\\",
+      "outputPath": "C:\\Users\\chengkuan\\source\\cst8359-Assignment2\\Lab5\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\chengkuan\\AppData\\Roaming\\NuGet\\NuGet.Config",

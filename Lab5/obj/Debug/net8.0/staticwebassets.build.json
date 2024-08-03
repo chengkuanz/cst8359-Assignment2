@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "modlQyOUyNSpo4Py6IzvKA72fAu0dOkOl6yLB4YwEFw=",
+  "Hash": "V8g8Nz2U6mEpSrFNtWdusPJmNoLK/L59AXtP8e3aJtE=",
   "Source": "Lab5",
   "BasePath": "_content/Lab5",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Lab5\\wwwroot",
       "Source": "Lab5",
-      "ContentRoot": "C:\\Users\\chengkuan\\source\\cst8359\\Lab5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\chengkuan\\source\\cst8359-Assignment2\\Lab5\\wwwroot\\",
       "BasePath": "_content/Lab5",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\chengkuan\\source\\cst8359\\Lab5\\wwwroot\\css\\bootstrap.min.css",
+      "Identity": "C:\\Users\\chengkuan\\source\\cst8359-Assignment2\\Lab5\\wwwroot\\css\\bootstrap.min.css",
       "SourceId": "Lab5",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\chengkuan\\source\\cst8359\\Lab5\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\chengkuan\\source\\cst8359-Assignment2\\Lab5\\wwwroot\\",
       "BasePath": "_content/Lab5",
       "RelativePath": "css/bootstrap.min.css",
       "AssetKind": "All",
