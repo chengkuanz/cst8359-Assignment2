@@ -1,0 +1,39 @@
+{
+  "Version": 1,
+  "Hash": "rQHT4ojP/I3e3zgOj0nV2ml9eZHy1yxKzeF+hvwZl38=",
+  "Source": "Lab5",
+  "BasePath": "_content/Lab5",
+  "Mode": "Default",
+  "ManifestType": "Publish",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Lab5\\wwwroot",
+      "Source": "Lab5",
+      "ContentRoot": "C:\\Users\\chengkuan\\source\\cst8359\\Lab5\\wwwroot\\",
+      "BasePath": "_content/Lab5",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\chengkuan\\source\\cst8359\\Lab5\\wwwroot\\css\\bootstrap.min.css",
+      "SourceId": "Lab5",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\chengkuan\\source\\cst8359\\Lab5\\wwwroot\\",
+      "BasePath": "_content/Lab5",
+      "RelativePath": "css/bootstrap.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\bootstrap.min.css"
+    }
+  ]
+}
