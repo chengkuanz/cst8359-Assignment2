@@ -53,7 +53,7 @@ namespace Lab5.Controllers
         // POST: Fans/Register
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(int fanId, string clubId)
+        public async Task<IActionResult> AddSubscription(int fanId, string clubId)
         {
             var subscription = new Subscription
             {
@@ -70,7 +70,7 @@ namespace Lab5.Controllers
         // POST: Fans/Unregister
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Unregister(int fanId, string clubId)
+        public async Task<IActionResult> RemoveSubscription(int fanId, string clubId)
         {
             var subscription = await _context.Subscriptions
                 .FirstOrDefaultAsync(s => s.FanId == fanId && s.SportClubId == clubId);

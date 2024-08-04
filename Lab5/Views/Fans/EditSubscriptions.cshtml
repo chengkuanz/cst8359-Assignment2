@@ -16,7 +16,7 @@
         {
             <li>
                 @subscription.SportClubName
-                <form asp-action="Unregister" method="post" style="display:inline;">
+                <form asp-action="RemoveSubscription" method="post" style="display:inline;">
                     <input type="hidden" name="fanId" value="@Model.Fan.Id" />
                     <input type="hidden" name="clubId" value="@subscription.SportClubId" />
                     <button type="submit" class="btn btn-link">Unregister</button>
@@ -34,7 +34,7 @@
             {
                 <li>
                     @club.Title
-                    <form asp-action="Register" method="post" style="display:inline;">
+                    <form asp-action="AddSubscription" method="post" style="display:inline;">
                         <input type="hidden" name="fanId" value="@Model.Fan.Id" />
                         <input type="hidden" name="clubId" value="@club.Id" />
                         <button type="submit" class="btn btn-link">Register</button>
