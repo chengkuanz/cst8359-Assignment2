@@ -12,7 +12,7 @@
     <p>Fan's Name:  @Model.Fan.LastName , @Model.Fan.FirstName</p>
     <p>Subscribed Clubs:</p>
     <ul>
-        @foreach (var subscription in Model.Subscriptions)
+        @foreach (var subscription in Model.Subscriptions.OrderBy(s => s.SportClubName))
         {
             <li>
                 @subscription.SportClubName
@@ -27,7 +27,7 @@
 
     <p>Available Clubs:</p>
     <ul>
-        @foreach (var club in Model.AllClubs)
+        @foreach (var club in Model.AllClubs.OrderBy(c => c.Title))
         {
             var isSubscribed = Model.Subscriptions.Any(s => s.SportClubId == club.Id);
             if (!isSubscribed)
