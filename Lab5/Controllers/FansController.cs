@@ -25,6 +25,7 @@ namespace Lab5.Controllers
                 return NotFound();
             }
 
+            //Find Fan
             var fan = await _context.Fans
                 .Include(f => f.Subscriptions)
                 .ThenInclude(s => s.SportClub)
