@@ -16,7 +16,7 @@ namespace Lab5.Controllers
         }
 
 
-        //assg2
+        //assg2: iii.	Edit the list of subscriptions for each Fan, which happens in Fans/EditSubscriptions
         // GET: Fans/EditSubscriptions/1
         public async Task<IActionResult> EditSubscriptions(int? id)
         {
