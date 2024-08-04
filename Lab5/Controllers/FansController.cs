@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.EntityFrameworkCore;
-using Lab5.Data;
+﻿using Lab5.Data;
 using Lab5.Models;
 using Lab5.Models.ViewModels;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace Lab5.Controllers
 {
@@ -20,8 +15,76 @@ namespace Lab5.Controllers
             _context = context;
         }
 
-        //assignment 2
-        
+
+        //assg2
+        // GET: Fans/EditSubscriptions/1
+        public async Task<IActionResult> EditSubscriptions(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var fan = await _context.Fans
+                .Include(f => f.Subscriptions)
+                .ThenInclude(s => s.SportClub)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
+            if (fan == null)
+            {
+                return NotFound();
+            }
+
+            var allClubs = await _context.SportClubs.ToListAsync();
+            var viewModel = new SubscriptionViewModel
+            {
+                Fan = fan,
+                Subscriptions = fan.Subscriptions.Select(s => new SubscriptionViewModel
+                {
+                    SportClubName = s.SportClub.Title,
+                    SportClubId = s.SportClubId
+                }).ToList(),
+                AllClubs = allClubs
+            };
+
+            return View(viewModel);
+        }
+
+        // POST: Fans/Register
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register(int fanId, string clubId)
+        {
+            var subscription = new Subscription
+            {
+                FanId = fanId,
+                SportClubId = clubId
+            };
+
+            _context.Subscriptions.Add(subscription);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction(nameof(EditSubscriptions), new { id = fanId });
+        }
+
+        // POST: Fans/Unregister
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Unregister(int fanId, string clubId)
+        {
+            var subscription = await _context.Subscriptions
+                .FirstOrDefaultAsync(s => s.FanId == fanId && s.SportClubId == clubId);
+
+            if (subscription != null)
+            {
+                _context.Subscriptions.Remove(subscription);
+                await _context.SaveChangesAsync();
+            }
+            return RedirectToAction(nameof(EditSubscriptions), new { id = fanId });
+        }
+
+
+        //assignment2: display subscription on the fan- index page 
         // GET: Fans
         //public async Task<IActionResult> Index()
         //{

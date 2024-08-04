@@ -1,0 +1,56 @@
+﻿@model Lab5.Models.ViewModels.SubscriptionViewModel
+
+@{
+    ViewData["Title"] = "Edit Subscriptions";
+}
+
+<h1>Edit Fan's Subscriptions </h1>
+
+<h4>Fan</h4>
+<hr />
+<div>
+    <p>Fan's Name:  @Model.Fan.LastName , @Model.Fan.FirstName</p>
+    <p>Subscribed Clubs:</p>
+    <ul>
+        @foreach (var subscription in Model.Subscriptions)
+        {
+            <li>
+                @subscription.SportClubName
+                <form asp-action="Unregister" method="post" style="display:inline;">
+                    <input type="hidden" name="fanId" value="@Model.Fan.Id" />
+                    <input type="hidden" name="clubId" value="@subscription.SportClubId" />
+                    <button type="submit" class="btn btn-link">Unregister</button>
+                </form>
+            </li>
+        }
+    </ul>
+
+    <p>Available Clubs:</p>
+    <ul>
+        @foreach (var club in Model.AllClubs)
+        {
+            var isSubscribed = Model.Subscriptions.Any(s => s.SportClubId == club.Id);
+            if (!isSubscribed)
+            {
+                <li>
+                    @club.Title
+                    <form asp-action="Register" method="post" style="display:inline;">
+                        <input type="hidden" name="fanId" value="@Model.Fan.Id" />
+                        <input type="hidden" name="clubId" value="@club.Id" />
+                        <button type="submit" class="btn btn-link">Register</button>
+                    </form>
+                </li>
+            }
+        }
+    </ul>
+
+    <div>
+        <a asp-action="Index">Back to List</a>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
