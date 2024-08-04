@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Lab5.Data;
 using Lab5.Models;
+using Lab5.Models.ViewModels;
 
 namespace Lab5.Controllers
 {
@@ -19,10 +20,34 @@ namespace Lab5.Controllers
             _context = context;
         }
 
+        //assignment 2
+        
         // GET: Fans
-        public async Task<IActionResult> Index()
+        //public async Task<IActionResult> Index()
+        //{
+        //    return View(await _context.Fans.ToListAsync());
+        //}
+        public async Task<IActionResult> Index(int? id)
         {
-            return View(await _context.Fans.ToListAsync());
+            var viewModel = new FanViewModel
+            {
+                Fans = await _context.Fans
+                    .Include(f => f.Subscriptions)
+                    .ThenInclude(s => s.SportClub)
+                    .AsNoTracking()
+                    .OrderBy(f => f.LastName)
+                    .ToListAsync()
+            };
+
+            if (id != null)
+            {
+                ViewData["FanID"] = id.Value;
+                viewModel.Subscriptions = viewModel.Fans.Where(
+                    f => f.Id == id.Value).Single().Subscriptions;
+                viewModel.SportClubs = viewModel.Subscriptions.Select(s => s.SportClub);
+            }
+
+            return View(viewModel);
         }
 
         // GET: Fans/Details/5
