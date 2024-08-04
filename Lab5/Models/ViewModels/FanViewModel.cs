@@ -9,4 +9,4 @@ namespace Lab5.Models.ViewModels
         public IEnumerable<SportClub> SportClubs { get; set; }
     }
 }
-
+//fans index view
