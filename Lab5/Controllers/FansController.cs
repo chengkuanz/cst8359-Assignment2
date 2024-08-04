@@ -72,14 +72,18 @@ namespace Lab5.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> RemoveSubscription(int fanId, string clubId)
         {
+            //Find Subscription
             var subscription = await _context.Subscriptions
                 .FirstOrDefaultAsync(s => s.FanId == fanId && s.SportClubId == clubId);
 
+            //Remove Subscription
             if (subscription != null)
             {
                 _context.Subscriptions.Remove(subscription);
                 await _context.SaveChangesAsync();
             }
+
+            //Redirect to EditSubscriptions
             return RedirectToAction(nameof(EditSubscriptions), new { id = fanId });
         }
 
