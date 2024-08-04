@@ -39,7 +39,7 @@
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a> |
                     <a asp-action="Index" asp-route-id="@item.Id">Select</a>
             </td>
         </tr>
@@ -48,7 +48,7 @@
 </table>
 @if (Model.SportClubs != null)
 {
-    <h3>Sport Clubs:</h3>
+    <h3>Member of the following SportClubs</h3>
     <table class="table">
         <tr>
             @if (Model.SportClubs.Any())
@@ -58,7 +58,7 @@
             }
             else
             {
-                <th>No sport club subscriptions exist</th>
+                <th>No subscription record exist</th>
             }
         </tr>
         @foreach (var sportClub in Model.SportClubs)
