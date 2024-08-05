@@ -2,3 +2,7 @@
 
 ToDo:   
 css change 
+
+
+http://localhost:5068/News/Index/A1
+display sportclub name
