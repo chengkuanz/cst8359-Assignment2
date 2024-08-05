@@ -69,13 +69,14 @@ namespace Lab5.Controllers
         // GET: News/Create
         public IActionResult Create()
         {
+            ViewData["SportClubId"] = new SelectList(_context.SportClubs, "Id", "Title");
             return View();
         }
 
         // POST: News/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(IFormFile file)
+        public async Task<IActionResult> Create(IFormFile file, [Bind("SportClubId")] News news)
         {
             var containerClient = await GetOrCreateContainerClientAsync();
             if (containerClient == null)
@@ -89,54 +90,22 @@ namespace Lab5.Controllers
             try
             {
                 await UploadFileToBlobAsync(file, blockBlob);
+                //for db
+                news.FileName = file.FileName;
+                news.Url = blockBlob.Uri.ToString();
+                _context.Add(news);
+                await _context.SaveChangesAsync();
             }
             catch (RequestFailedException)
             {
                 return View("Error");
             }
 
-            return RedirectToAction("Index");
+            return RedirectToAction(nameof(Index), new { id = news.SportClubId });
         }
 
 
-        //// GET: News/Delete/5
-        //public async Task<IActionResult> Delete(int? id)
-        //{
-        //    if (id == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    var news = await _context.News
-        //        .FirstOrDefaultAsync(m => m.NewsId == id);
-        //    if (news == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    return View(news);
-        //}
-
-        //// POST: News/Delete/5
-        //[HttpPost, ActionName("Delete")]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> DeleteConfirmed(int id)
-        //{
-        //    var news = await _context.News.FindAsync(id);
-        //    if (news == null)
-        //    {
-        //        return NotFound();
-        //    }
-
-        //    _context.News.Remove(news);
-        //    await _context.SaveChangesAsync();
-        //    return RedirectToAction(nameof(Index));
-        //}
-
-        //private bool NewsExists(int id)
-        //{
-        //    return _context.News.Any(e => e.NewsId == id);
-        //}
+      
 
         private async Task<BlobContainerClient> GetOrCreateContainerClientAsync()
         {
