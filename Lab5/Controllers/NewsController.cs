@@ -91,7 +91,8 @@ namespace Lab5.Controllers
             {
                 await UploadFileToBlobAsync(file, blockBlob);
                 //for db
-                news.FileName = file.FileName;
+               // news.FileName = file.FileName;
+               news.FileName = randomFileName;
                 news.Url = blockBlob.Uri.ToString();
                 _context.Add(news);
                 await _context.SaveChangesAsync();
