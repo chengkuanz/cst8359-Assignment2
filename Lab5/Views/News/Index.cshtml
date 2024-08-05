@@ -1,0 +1,45 @@
+﻿@model Lab5.Models.ViewModels.NewsViewModel
+
+@{
+    ViewData["Title"] = "News Index";
+}
+
+<h1>News</h1>
+
+<p>
+    <a href="@Url.Action("Create", "News")" class="btn btn-primary">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.News.First().FileName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.News.First().Url)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.News)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FileName)
+                </td>
+                <td>
+                    <img src="@item.Url" alt="Image for @item.FileName" style="height:100px; width:100px;">
+                </td>
+                <td>
+                    <a href="@Url.Action("Edit", "News", new { id = item.NewsId })" class="btn btn-warning">Edit</a> |
+                    <a href="@Url.Action("Delete", "News", new { id = item.NewsId })" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

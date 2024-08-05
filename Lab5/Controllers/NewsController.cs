@@ -21,9 +21,23 @@ namespace Lab5.Controllers
         }
 
         // GET: News
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string id)
         {
-            return View(await _context.News.ToListAsync());
+            //return View(await _context.News.ToListAsync());
+            var sportClub = _context.SportClubs.Find(id);
+            if (sportClub == null)
+            {
+                return NotFound();
+            }
+
+            var news = _context.News.Where(n => n.SportClubId == id).ToList();
+            var viewModel = new NewsViewModel
+            {
+                SportClub = sportClub,
+                News = news
+            };
+
+            return View(viewModel);
         }
 
         // GET: News/Details/5
