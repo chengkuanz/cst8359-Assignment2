@@ -5,9 +5,15 @@ css change
 
 
 http://localhost:5068/News/Index/A1
-display sportclub name
+todo display sportclub name
 
 news upload:  
-display sportclub name 
+todo:display sportclub name 
 
-news delete    
+todo:news delete 
+
+
+ToDo publish 
+
+
+   
