@@ -17,6 +17,8 @@ namespace Lab5.Data
         public DbSet<SportClub> SportClubs { get; set; }
         public DbSet<Subscription> Subscriptions { get; set; }
 
+        public DbSet<News> News { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             // Call base class implementation
@@ -26,6 +28,7 @@ namespace Lab5.Data
             modelBuilder.Entity<Fan>().ToTable("Fan");
             modelBuilder.Entity<SportClub>().ToTable("SportClub");
             modelBuilder.Entity<Subscription>().ToTable("Subscription");
+            modelBuilder.Entity<News>().ToTable("News");
 
            
         }
