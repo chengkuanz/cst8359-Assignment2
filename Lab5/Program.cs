@@ -1,6 +1,10 @@
 using Lab5.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Hosting;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Routing;
+using Azure.Storage.Blobs;
+
 
 namespace Lab5
 {
@@ -12,9 +16,19 @@ namespace Lab5
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            ////assg2
+            //builder.Services.AddRazorPages(); // Add this line
+
             var connection = builder.Configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddDbContext<SportsDbContext>(options => options.UseSqlServer(connection));
             builder.Services.AddSession();
+
+            //asssg2
+            var blobConnection = builder.Configuration.GetConnectionString("AzureBlobStorage");
+            builder.Services.AddSingleton(new BlobServiceClient(blobConnection));
+
+
             var app = builder.Build();
 
             using (var scope = app.Services.CreateScope())
@@ -46,6 +60,9 @@ namespace Lab5
             app.MapControllerRoute(
                 name: "default",
                 pattern: "{controller=Home}/{action=Index}/{id?}");
+            //app.UseEndpoints(endpoints => {
+            //    endpoints.MapRazorPages();
+            //});
 
             app.Run();
         }
