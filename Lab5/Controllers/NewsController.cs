@@ -106,7 +106,43 @@ namespace Lab5.Controllers
         }
 
 
-      
+        // GET: News/Delete/5
+        public IActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var news = _context.News
+                .FirstOrDefault(m => m.NewsId == id);
+            if (news == null)
+            {
+                return NotFound();
+            }
+
+            var viewModel = new NewsViewModel
+            {
+                News = new List<News> { news }
+            };
+
+            return View(viewModel);
+        }
+
+        // POST: News/Delete/5
+        [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var news = _context.News.Find(id);
+            if (news != null)
+            {
+                _context.News.Remove(news);
+                _context.SaveChanges();
+            }
+            return RedirectToAction(nameof(Index), new { id = news.SportClubId });
+        }
+
 
         private async Task<BlobContainerClient> GetOrCreateContainerClientAsync()
         {
