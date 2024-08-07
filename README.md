@@ -19,3 +19,4 @@ todo demo
 
 check rubric
    
+https://chengkuanassg2-hcenbtb4gjdjg0gs.canadacentral-01.azurewebsites.net/News/Index/A1
