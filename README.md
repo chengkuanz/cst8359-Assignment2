@@ -12,7 +12,7 @@ todo:display sportclub name
 news delete 
 todo:display sportclub name 
 
-ToDo publish 
+ToDo re-publish 
 
 todo demo 
 
