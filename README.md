@@ -19,4 +19,4 @@ todo demo
 check rubric
    
 https://chengkuanassg2-hcenbtb4gjdjg0gs.canadacentral-01.azurewebsites.net/News/Index/A1
-fix back to list, one of them
+fix back to list, one of them (DONE)
