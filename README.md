@@ -10,7 +10,7 @@ news upload:
 todo:display sportclub name 
 
 news delete 
-todo:display sportclub name 
+todo:display sportclub name (DONE)
 
 ToDo re-publish 
 
