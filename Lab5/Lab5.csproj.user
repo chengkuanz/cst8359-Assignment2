@@ -16,6 +16,6 @@
     <WebStackScaffolding_DbContextTypeFullName>Lab5.Data.SportsDbContext</WebStackScaffolding_DbContextTypeFullName>
     <WebStackScaffolding_IsAsyncSelected>False</WebStackScaffolding_IsAsyncSelected>
     <WebStackScaffolding_IsViewGenerationSelected>True</WebStackScaffolding_IsViewGenerationSelected>
-    <NameOfLastUsedPublishProfile>C:\Users\chengkuan\source\cst8359\Lab5\Properties\PublishProfiles\chengkuanlab5 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>C:\Users\chengkuan\source\cst8359-Assignment2\Lab5\Properties\PublishProfiles\chengkuanassg2 - Web Deploy.pubxml</NameOfLastUsedPublishProfile>
   </PropertyGroup>
 </Project>
