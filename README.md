@@ -4,16 +4,20 @@ ToDo:
 css change 
 
 
-http://localhost:5068/News/Index/A1
+news index
 todo display sportclub name
 
 news upload:  
 todo:display sportclub name 
 
-todo:news delete 
-
+news delete 
+todo:display sportclub name 
 
 ToDo publish 
 
 todo demo 
+
+check rubric
    
+https://chengkuanassg2-hcenbtb4gjdjg0gs.canadacentral-01.azurewebsites.net/News/Index/A1
+fix back to list, one of them
