@@ -20,7 +20,10 @@ namespace Lab5.Models
         [Required]
         public string SportClubId { get; set; }
 
+        [Required]
+        public SportClub SportClub { get; set; }
 
-       
+
+
     }
 }

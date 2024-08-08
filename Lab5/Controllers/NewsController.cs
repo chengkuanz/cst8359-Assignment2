@@ -107,15 +107,16 @@ namespace Lab5.Controllers
 
 
         // GET: News/Delete/5
-        public IActionResult Delete(int? id)
+        public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
 
-            var news = _context.News
-                .FirstOrDefault(m => m.NewsId == id);
+            var news = await _context.News
+                .Include(n => n.SportClub) // Ensure SportClub is included
+                .FirstOrDefaultAsync(m => m.NewsId == id);
             if (news == null)
             {
                 return NotFound();
@@ -123,11 +124,13 @@ namespace Lab5.Controllers
 
             var viewModel = new NewsViewModel
             {
-                News = new List<News> { news }
+                News = new List<News> { news },
+                SportClub = news.SportClub // Set the SportClub in the ViewModel
             };
 
             return View(viewModel);
         }
+
 
         // POST: News/Delete/5
         [HttpPost, ActionName("Delete")]
