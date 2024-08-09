@@ -5,7 +5,7 @@
     var sportClubId = (string)ViewContext.RouteData.Values["id"];
 }
 
-<h1>News</h1>
+<h1>News for SportClub @Model.SportClub.Title</h1>
 
 <p>
     <a href="@Url.Action("Create", "News", new { id = sportClubId })" class="btn btn-primary">Upload New</a>

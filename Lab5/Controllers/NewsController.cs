@@ -67,11 +67,31 @@ namespace Lab5.Controllers
         }
 
         // GET: News/Create
-        public IActionResult Create()
+        public IActionResult Create(string id)
         {
-            ViewData["SportClubId"] = new SelectList(_context.SportClubs, "Id", "Title");
-            return View();
+            if (string.IsNullOrEmpty(id))
+            {
+                return NotFound();
+            }
+
+            // Fetch the SportClub object
+            var sportClub = _context.SportClubs.Find(id);
+            if (sportClub == null)
+            {
+                return NotFound();
+            }
+
+            // Initialize the News model with the SportClub information
+            var news = new News
+            {
+                SportClubId = id,
+                SportClub = sportClub
+            };
+
+            // Pass the fully initialized model to the view
+            return View(news);
         }
+
 
         // POST: News/Create
         [HttpPost]
