@@ -1,7 +1,11 @@
 # cst8359-Assignment2
+https://chengkuanassg2-hcenbtb4gjdjg0gs.canadacentral-01.azurewebsites.net/        
 
 ToDo:   
 
+todo demo    
+
+check rubric    
 
 news index
 todo display sportclub name (DONE)
@@ -12,11 +16,11 @@ todo:display sportclub name (DONE)
 news delete 
 todo:display sportclub name (DONE)
 
-ToDo re-publish 
+ToDo re-publish done 
 
-todo demo 
 
-check rubric
    
 https://chengkuanassg2-hcenbtb4gjdjg0gs.canadacentral-01.azurewebsites.net/News/Index/A1
-fix back to list, one of them (DONE)
+fix back to list, one of them (DONE)      
+
+     
