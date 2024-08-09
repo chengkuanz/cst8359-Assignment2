@@ -4,10 +4,10 @@ ToDo:
 
 
 news index
-todo display sportclub name
+todo display sportclub name (DONE)
 
 news upload:  
-todo:display sportclub name 
+todo:display sportclub name (DONE)
 
 news delete 
 todo:display sportclub name (DONE)
