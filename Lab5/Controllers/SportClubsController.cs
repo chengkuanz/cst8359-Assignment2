@@ -175,6 +175,15 @@ namespace Lab5.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(string id)
         {
+
+            // Check if there are any associated News
+            var hasNews = await _context.News.AnyAsync(n => n.SportClubId == id);
+            if (hasNews)
+            {
+                
+                return RedirectToAction(nameof(Index)); 
+            }
+
             var sportClub = await _context.SportClubs.FindAsync(id);
             if (sportClub != null)
             {
