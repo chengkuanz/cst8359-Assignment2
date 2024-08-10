@@ -7,3 +7,4 @@
         public IEnumerable<Subscription> Subscriptions { get; set; }
     }
 }
+//sportclub index used 

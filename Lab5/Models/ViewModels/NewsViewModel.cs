@@ -9,3 +9,4 @@ namespace Lab5.Models.ViewModels
         public SportClub SportClub { get; set; }
     }
 }
+//news index, news delete

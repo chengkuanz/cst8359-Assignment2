@@ -109,9 +109,9 @@ namespace Lab5.Controllers
 
             if (id != null)
             {
-                ViewData["FanID"] = id.Value;
+                ViewData["FanID"] = id;
                 viewModel.Subscriptions = viewModel.Fans.Where(
-                    f => f.Id == id.Value).Single().Subscriptions;
+                    f => f.Id == id).Single().Subscriptions;
                 viewModel.SportClubs = viewModel.Subscriptions.Select(s => s.SportClub);
             }
 
