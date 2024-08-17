@@ -37,8 +37,9 @@ You can access the deployed web app [here](https://chengkuanassg2-hcenbtb4gjdjg0
 
 - **.NET 8.0 SDK** or higher
 - **Microsoft Visual Studio 2022** or a compatible IDE
-- **SQL Server** (Local or Azure SQL Database)
-- **Azure account** for deployment (optional)
+- **Azure SQL Database** for data storage
+- **Azure Blob Storage** for media file storage
+- **Azure account** for web app deployment (optional)
 
 ---
 
