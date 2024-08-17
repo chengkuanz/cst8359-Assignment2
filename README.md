@@ -2,30 +2,32 @@
 
 ## Overview
 
-This project involves developing a Fan Club Web Application using **ASP.NET Core MVC** and **Entity Framework**. The application allows users to manage fan subscriptions to various sports clubs, upload and manage news related to sports clubs, and perform CRUD (Create, Read, Update, Delete) operations.
+This project is a comprehensive **Fan Club Web Application** developed using **ASP.NET Core MVC** and **Entity Framework**. The application facilitates the management of fan subscriptions across various sports clubs, the administration of sports-related news, and the execution of CRUD (Create, Read, Update, Delete) operations for fans, clubs, and news.
+
 
 ### Features
 
 #### Fan Management
-- **View Fans**: Display a list of all fans with options to view detailed profiles.
-- **Add Fans**: Register new fans with fields like name, birthdate, and subscriptions.
+- **View Fans**: Display a list of all fans with options to view detailed profiles and associated subscriptions.
+- **Add Fans**: Register new fans by providing essential details such as name, birthdate, and sports club subscriptions.
 - **Edit Fans**: Update existing fan information and manage their subscriptions to different sport clubs.
-- **Delete Fans**: Remove fans from the database, including all related subscriptions.
+- **Delete Fans**: Safely remove fans from the database, along with all their associated subscriptions.
 
 #### Sport Club Management
 - **Create Sport Clubs**: Add new sport clubs with unique registration numbers, titles, and membership fees.
 - **View Sport Clubs**: List all sport clubs with options to view detailed information, including current news and subscribed fans.
-- **Edit Sport Clubs**: Update sport club details and manage news postings.
+- **Edit Sport Clubs**: Update sport club details and manage related news postings.
 - **Delete Sport Clubs**: Safely remove sport clubs from the database, ensuring all associated news is deleted first to maintain data integrity.
+
 
 #### Subscription Management
 - **Manage Subscriptions**: Fans can subscribe or unsubscribe from sport clubs through a user-friendly interface.
-- **Sorting Logic**: Display current subscriptions first, followed by other clubs sorted alphabetically, enhancing user experience.
+- **Sorting Logic**: Enhance user experience by displaying current subscriptions first, followed by other clubs sorted alphabetically.
 
 #### News Management
-- **Upload News**: Authorized users can upload news items related to sport clubs, including text and images.
-- **View News**: Display news items associated with a sport club, with details like the date posted and content.
-- **Delete News**: Remove news items from the database, with checks to ensure integrity before deletion.
+- **Upload News**: Authorized users can upload news images related to sport clubs.
+- **View News**: Display news items associated with a specific sport club, including the file name and images.
+- **Delete News**: Safely remove news items from the database, with checks to ensure integrity before deletion.
 
 ---
 
