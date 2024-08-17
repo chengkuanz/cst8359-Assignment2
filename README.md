@@ -4,6 +4,8 @@
 
 This project is a comprehensive **Fan Club Web Application** developed using **ASP.NET Core MVC** and **Entity Framework**. The application facilitates the management of fan subscriptions across various sports clubs, the administration of sports-related news, and the execution of CRUD (Create, Read, Update, Delete) operations for fans, clubs, and news.
 
+You can access the deployed web app [here](https://chengkuanassg2-hcenbtb4gjdjg0gs.canadacentral-01.azurewebsites.net/).
+
 
 ### Features
 
