@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is part of CST8359 (NET Enterprise Application Development) and involves developing a Fan Club Web Application using **ASP.NET Core MVC** and **Entity Framework**. The application allows users to manage fan subscriptions to various sports clubs, upload and manage news related to sports clubs, and perform CRUD (Create, Read, Update, Delete) operations.
+This project involves developing a Fan Club Web Application using **ASP.NET Core MVC** and **Entity Framework**. The application allows users to manage fan subscriptions to various sports clubs, upload and manage news related to sports clubs, and perform CRUD (Create, Read, Update, Delete) operations.
 
 ### Features
 
@@ -41,5 +41,3 @@ This project is part of CST8359 (NET Enterprise Application Development) and inv
 ## Contributors
 
 This web application was developed by [Chengkuan Zhao](https://github.com/chengkuanz) and [Thi Thanh Van Le](https://github.com/Le-Vivian) between June 2022 and August 2022 as part of the **NET Enterprise Application Development** course (CST8359) at Algonquin College.
-
----
