@@ -53,4 +53,4 @@ You can access the deployed web app [here](https://chengkuanassg2-hcenbtb4gjdjg0
 
 ## Contributors
 
-This web application was developed by [Chengkuan Zhao](https://github.com/chengkuanz) and [Thi Thanh Van Le](https://github.com/Le-Vivian) between June 2022 and August 2022 as part of the **NET Enterprise Application Development** course (CST8359) at Algonquin College.
+This web application was developed by [Chengkuan Zhao](https://github.com/chengkuanz) and [Thi Thanh Van Le](https://github.com/Le-Vivian) between June 2024 and August 2024 as part of the **NET Enterprise Application Development** course (CST8359) at Algonquin College.
