@@ -4,7 +4,7 @@
 
 This project is a comprehensive web application developed using **ASP.NET Core MVC** and **Entity Framework Core**, designed to manage fan subscriptions for various sports clubs. The application supports **CRUD** operations for fans, sports clubs, and news pictures, with an intuitive interface for creating, viewing, editing, and deleting data. Leveraging **Razor syntax**, the dynamic views ensure a responsive and user-friendly experience. The application integrates Azure services, including **Azure Web App** for deployment, **Azure Blob Storage** for media file management, and **Azure SQL Database** for data storage. Additionally, custom controllers were implemented to handle HTTP requests and route business logic efficiently, while **database migrations** ensured seamless updates to the database schema.
 
-You can access the deployed web app [here](https://chengkuanassg2-hcenbtb4gjdjg0gs.canadacentral-01.azurewebsites.net/).
+The application is fully deployed in Azure and accessible through this [link](https://chengkuanassg2-hcenbtb4gjdjg0gs.canadacentral-01.azurewebsites.net/).
 
 ## Technologies Used
 
