@@ -2,9 +2,23 @@
 
 ## Overview
 
-This project is a comprehensive **Fan Club Web Application** developed using **ASP.NET Core MVC** and **Entity Framework**. The application facilitates the management of fan subscriptions across various sports clubs, the administration of sports-related news, and the execution of CRUD (Create, Read, Update, Delete) operations for fans, clubs, and news.
+This project is a comprehensive web application developed using **ASP.NET Core MVC** and **Entity Framework Core**, designed to manage fan subscriptions for various sports clubs. The application supports **CRUD** operations for fans, sports clubs, and news pictures, with an intuitive interface for creating, viewing, editing, and deleting data. Leveraging **Razor syntax**, the dynamic views ensure a responsive and user-friendly experience. The application integrates Azure services, including **Azure Web App** for deployment, **Azure Blob Storage** for media file management, and **Azure SQL Database** for data storage. Additionally, custom controllers were implemented to handle HTTP requests and route business logic efficiently, while **database migrations** ensured seamless updates to the database schema.
 
 You can access the deployed web app [here](https://chengkuanassg2-hcenbtb4gjdjg0gs.canadacentral-01.azurewebsites.net/).
+
+## Technologies Used
+
+- **ASP.NET Core MVC**: For developing the web application following the Model-View-Controller pattern.
+- **Entity Framework Core**: As an ORM (Object-Relational Mapper) to interact with the database using .NET objects.
+- **Azure SQL Database**: For secure and scalable data storage.
+- **Azure Blob Storage**: For storing media files (news images).
+- **Azure Web App**: For deploying the application to the cloud.
+- **Razor Pages**: For generating dynamic web content using C# and HTML.
+- **Data Annotations**: For model validation and enforcing rules on the data input.
+- **Bootstrap**: For responsive design and a consistent user interface.
+- **C#**: The primary programming language used for back-end development.
+- **LINQ (Language Integrated Query)**: For querying the database in a more readable and concise manner.
+
 
 ## Features
 
@@ -29,19 +43,6 @@ You can access the deployed web app [here](https://chengkuanassg2-hcenbtb4gjdjg0
 - **View News**: Display news items associated with a specific sport club, including the file name and images.
 - **Delete News**: Safely remove news items from the database, with checks to ensure integrity before deletion.
 
-## Technologies Used
-
-- **ASP.NET Core MVC**: For developing the web application following the Model-View-Controller pattern.
-- **Entity Framework Core**: As an ORM (Object-Relational Mapper) to interact with the database using .NET objects.
-- **Azure SQL Database**: For secure and scalable data storage.
-- **Azure Blob Storage**: For storing media files (news images).
-- **Azure Web App**: For deploying the application to the cloud.
-- **Bootstrap**: For responsive design and a consistent user interface.
-- **C#**: The primary programming language used for back-end development.
-- **LINQ (Language Integrated Query)**: For querying the database in a more readable and concise manner.
-- **Razor Pages**: For generating dynamic web content using C# and HTML.
-- **Data Annotations**: For model validation and enforcing rules on the data input.
-- **Dependency Injection**: To inject services into controllers, following the SOLID principles.
 
 ## Requirements
 
