@@ -19,6 +19,13 @@ The application is fully deployed in Azure and accessible through this [link](ht
 - **C#**: The primary programming language used for back-end development.
 - **LINQ (Language Integrated Query)**: For querying the database in a more readable and concise manner.
 
+## Demo Video
+
+
+
+https://github.com/user-attachments/assets/d4551561-fe87-4270-9e59-1fc14f6288f8
+
+
 
 ## Features
 
