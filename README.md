@@ -21,7 +21,11 @@ The application is fully deployed in Azure and accessible through this [link](ht
 
 ## Demo Video
 
-https://github.com/user-attachments/assets/6cc369cf-c173-4036-accd-63a07cd12086
+
+
+https://github.com/user-attachments/assets/260d0880-e980-49a0-85d7-c1dbbec36f80
+
+
 
 ## Features
 
